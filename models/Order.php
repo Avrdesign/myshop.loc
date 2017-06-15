@@ -4,7 +4,7 @@
  * Created by PhpStorm.
  * User: st
  * Date: 15.06.2017
- * Time: 21:10
+ * Time: 21:08
  */
 class Order
 {
@@ -18,7 +18,7 @@ class Order
     private $dateCreate;
     private $comment;
 
-    public function __construct($id, $totalPrice, $status, $products, $userName, $userAddress, $userPhone,$dateCreate, $comment)
+    public function __construct($id,$totalPrice,$status,$products,$userName,$userAddress,$userPhone,$dateCreate,$comment)
     {
         $this->id = $id;
         $this->totalPrice = $totalPrice;
@@ -29,9 +29,15 @@ class Order
         $this->userPhone = $userPhone;
         $this->dateCreate = $dateCreate;
         $this->comment = $comment;
-
     }
 
+    /**
+     * @return mixed
+     */
+    public function getComment()
+    {
+        return $this->comment;
+    }
 
     /**
      * @return mixed
@@ -39,6 +45,22 @@ class Order
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDateCreate()
+    {
+        return $this->dateCreate;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUserPhone()
+    {
+        return $this->userPhone;
     }
 
     /**
@@ -58,19 +80,19 @@ class Order
     }
 
     /**
-     * @return mixed
+     * @param mixed $status
      */
-    public function getProducts()
+    public function setStatus($status)
     {
-        return $this->products;
+        $this->status = $status;
     }
 
     /**
      * @return mixed
      */
-    public function getUserName()
+    public function getProducts()
     {
-        return $this->userName;
+        return $this->products;
     }
 
     /**
@@ -84,24 +106,9 @@ class Order
     /**
      * @return mixed
      */
-    public function getUserPhone()
+    public function getUserName()
     {
-        return $this->userPhone;
+        return $this->userName;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getDateCreate()
-    {
-        return $this->dateCreate;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getComment()
-    {
-        return $this->comment;
-    }
 }

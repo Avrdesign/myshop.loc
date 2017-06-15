@@ -1,8 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData">
+  <component name="PublishConfigData" serverName="myshop.loc">
     <serverData>
-      <paths name="gg">
+      <paths name="Calculator">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Magazin-master">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$/../Magazin-master" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="flyfishsoft.com">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="myshop.loc">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="nextstep-pl.biz">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="nextstep-ru.biz">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

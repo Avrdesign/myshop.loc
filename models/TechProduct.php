@@ -6,14 +6,33 @@
  * Date: 15.06.2017
  * Time: 20:25
  */
+
 class TechProduct extends Product
 {
     private $categoryId;
+    private $rating;
 
-    public function __construct($id, $name, $description, $icon, $price, $categoryId)
+    public function __construct($id,$name,$description,$icon,$price,$exists,$categoryId)
     {
-        parent::__construct($id, $name, $description, $icon, $price);
+        parent::__construct($id,$name,$description,$icon,$price,$exists);
         $this->categoryId = $categoryId;
+    }
+
+
+    /**
+     * @param mixed $rating
+     */
+    public function setRating($rating)
+    {
+        $this->rating = $rating;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRating()
+    {
+        return $this->rating;
     }
 
     /**
@@ -24,8 +43,11 @@ class TechProduct extends Product
         return $this->categoryId;
     }
 
-/*    public function getIcon()
+    /**
+     * @param mixed $categoryId
+     */
+    public function setCategoryId($categoryId)
     {
-        return '/images'.parent::getIcon();
-    }*/
+        $this->categoryId = $categoryId;
+    }
 }

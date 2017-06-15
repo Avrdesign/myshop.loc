@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e38faeb6-cdc1-4ff8-9ccd-36869105f839" name="Magazin-master" url="http://Magazin-master">
+        <fileTransfer port="0" mountedRoot="D:\WEB-learning\PHP-MySQL\PhpStorm\Magazin-master" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

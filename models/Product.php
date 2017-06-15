@@ -4,7 +4,7 @@
  * Created by PhpStorm.
  * User: st
  * Date: 15.06.2017
- * Time: 20:12
+ * Time: 20:13
  */
 class Product
 {
@@ -13,17 +13,16 @@ class Product
     protected $description;
     protected $icon;
     protected $price;
-    protected $exist;
+    protected $exists;
 
-    public function __construct($id, $name, $description, $icon, $price, $exist)
+    public function __construct($id,$name,$description,$icon,$price,$exists)
     {
         $this->id = $id;
         $this->name = $name;
         $this->description = $description;
         $this->icon = $icon;
         $this->price = $price;
-        $this->exist = $exist;
-
+        $this->exists= $exists;
     }
 
     /**
@@ -59,11 +58,11 @@ class Product
     }
 
     /**
-     * @param mixed $exist
+     * @return mixed
      */
-    public function setExist($exist)
+    public function getName()
     {
-        $this->exist = $exist;
+        return $this->name;
     }
 
     /**
@@ -72,14 +71,6 @@ class Product
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getName()
-    {
-        return $this->name;
     }
 
     /**
@@ -109,8 +100,17 @@ class Product
     /**
      * @return mixed
      */
-    public function getExist()
+    public function getExists()
     {
-        return $this->exist;
+        return $this->exists;
     }
+
+    /**
+     * @param mixed $exists
+     */
+    public function setExists($exists)
+    {
+        $this->exists = $exists;
+    }
+
 }
