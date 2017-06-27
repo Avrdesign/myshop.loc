@@ -22,9 +22,17 @@ echo '<br>';
 echo 'Наличие на складе - ';
 echo $product1->getExists() ? 'Да': 'Нет';
 echo '<br>';
+echo '<br>';
 
-$product = new FeedBack(1,'Шурик','Аккумуляторный 12V','nfkjfljwbgnlewg.jpeg',date('d-m-Y'),9,10);
+$product = new FeedBack(1,'Шуруповерт','Я очень доволен!','Федот',date('d-m-Y'),9,10);
 
-echo $product->getDateCreate();
+echo 'Отзывы: <hr>';
+echo $product->getDateCreate() . '<br>';
+echo $product->getProductId() . '<br>';
+echo 'Автор: ' . $product->getUserName() . '<br>';
+echo 'Отзыв: ' . $product->getText() . '<br>';
+
+
+
 
 

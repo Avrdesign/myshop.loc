@@ -1,9 +1,9 @@
 <?php
 
-require_once 'models/Categorie.php';
+require_once 'models/Category.php';
 require_once 'Utils.php';
 
-$categorie1 = new Categorie('1', 'Мяч');
+$categorie1 = new Category('1', 'Мяч');
 
 echo $categorie1->getName();
 echo '<br>';
