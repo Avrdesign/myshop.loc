@@ -1,1 +1,5 @@
 "# myshop.loc" 
+
+
+ООП
+MySQL
