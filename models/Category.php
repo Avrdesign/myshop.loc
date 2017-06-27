@@ -11,13 +11,13 @@ class Category
 {
     private $id;
     private $name;
-    private $slug;
+    private $slug; //это поле будет содержать $name на латинице
 
     public function __construct($id,$name)
     {
         $this->id = $id;
         $this->name = $name;
-        $this->slug = Utils::rusToLat($name);
+        $this->slug = Utils::rusToLat($name); //функция автоматически преобразовывает $name на латинице
     }
 
     /**

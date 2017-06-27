@@ -1,6 +1,7 @@
 <?php
 require_once 'models/Product.php';
 require_once 'models/TechProduct.php';
+require_once 'models/FeedBack.php';
 require_once 'Utils.php';
 
 $product1 = new TechProduct(1, 'Шуруповерт', 'Аккумуляторный, 12В', 'werwerr.jpg', 50, false, 2);
@@ -20,5 +21,10 @@ echo '<br>';
 
 echo 'Наличие на складе - ';
 echo $product1->getExists() ? 'Да': 'Нет';
+echo '<br>';
+
+$product = new FeedBack(1,'Шурик','Аккумуляторный 12V','nfkjfljwbgnlewg.jpeg',date('d-m-Y'),9,10);
+
+echo $product->getDateCreate();
 
 
