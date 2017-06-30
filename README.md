@@ -1,5 +1,1 @@
-"# myshop.loc" 
-
-
-ООП
-MySQL
+"# Magazin" 

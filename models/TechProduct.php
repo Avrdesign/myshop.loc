@@ -12,9 +12,9 @@ class TechProduct extends Product
     private $categoryId;
     private $rating;
 
-    public function __construct($id,$name,$description,$icon,$price,$exists,$categoryId)
+    public function __construct($id, $name, $description, $icon, $price,$categoryId)
     {
-        parent::__construct($id,$name,$description,$icon,$price,$exists);
+        parent::__construct($id, $name, $description, $icon, $price);
         $this->categoryId = $categoryId;
     }
 
