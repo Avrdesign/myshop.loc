@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="test@localhost" uuid="1d049b97-a919-474e-bcb9-d57a64b179ed">
+    <data-source source="LOCAL" name="test_myshop@localhost" uuid="ac92a422-750a-4949-b8f6-aeb976b39cf8">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3307/test</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/test_myshop</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />

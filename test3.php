@@ -31,17 +31,25 @@ require_once 'Rout.php';
 /*$rout = new Routing();
 $rout->resp();*/
 
-/*
+
 $db = DBManager::getDB();
 echo '<pre>';
 var_dump($db->getAllData("users"));
 echo '</pre>';
-*/
 
 echo '<pre>';
+var_dump($db->getAllData("categories"));
+echo '</pre>';
+
+echo '<pre>';
+var_dump($db->getFieldById("categories", 1));
+echo '</pre>';
+
+
+/*echo '<pre>';
 $rout = new Rout();
 
-echo '</pre>';
+echo '</pre>';*/
 
 /*
 echo '<pre>';
