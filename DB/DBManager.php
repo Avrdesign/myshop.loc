@@ -39,20 +39,6 @@ class DBManager
             return self::$db;
     }
 
-
-    /**
-     * @return array
-     */
-    public function getDataFromTableWhere($tableName,$key,$value){
-        $sql = "SELECT * FROM $tableName WHERE $key='$value'";
-        $result = $this->connection->query($sql);
-        $array = array();
-        while($row = $result->fetch_assoc()){
-            $array[] = $row;
-        }
-        return $array;
-    }
-
     /**
      * @return array
      */
@@ -66,9 +52,26 @@ class DBManager
         return $array;
     }
 
-    public function getFieldBySlug($tableName,$slug){
-        $sql = "SELECT * FROM $tableName WHERE slug = '$slug' LIMIT 1";
+    /**
+     * @return array
+     */
+    public function getArrayFromTableWhere($tableName,$key,$value){
+        $sql = "SELECT * FROM $tableName WHERE $key='$value'";
+        $result = $this->connection->query($sql);
+        $array = array();
+        while($row = $result->fetch_assoc()){
+            $array[] = $row;
+        }
+        return $array;
+    }
+
+    public function getFieldFromTableWhere($tableName,$key,$value){
+        $sql = "SELECT * FROM $tableName WHERE $key='$value' LIMIT 1";
         $result = $this->connection->query($sql);
         return $result->fetch_assoc();
     }
+
+
+
+
 }

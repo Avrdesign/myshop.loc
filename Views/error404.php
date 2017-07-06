@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="col-md-8">
-            Contacts Controller
+            Error 404 Controller
         </div>
     </div>
 </div>

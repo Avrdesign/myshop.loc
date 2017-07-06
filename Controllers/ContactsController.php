@@ -11,6 +11,12 @@ class ContactsController implements IController
 
     public function response()
     {
-        echo 'ContactsController';
+        $categoryRelation = new CategoriesRelation();
+
+        $categories = $categoryRelation->getAllCategories();
+
+        include_once 'Views/header.php';
+        include_once 'Views/contacts.php';
+        include_once 'Views/footer.php';
     }
 }

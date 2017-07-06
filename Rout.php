@@ -14,13 +14,14 @@ class Rout
     const CONTACTS = 'contacts';
     const CATEGORY = 'category';
     const PRODUCT = 'product';
+    const REST_API = 'rest_api';
 
     private $controller;
 
     public function __construct()
     {
         $params = explode('/',$_SERVER["REQUEST_URI"]);
-        if (!empty($params[3])){
+        if (!empty($params[4])){
             $this->controller = new Error404Controller();
             return;
         }
@@ -35,12 +36,16 @@ class Rout
             case self::CONTACTS :
                 $this->controller = new ContactsController();
                 break;
+            case self::REST_API :
+                $this->controller = new RestController();
+                break;
             case self::CATEGORY :
                 if (!empty($params[2]) and !Utils::regExpOnlyLettersAndNumbers($params[2])){
                     $this->controller = new Error404Controller();
                     break;
                 }
-                $this->controller = new CategoriesController($params[2]);
+                $page = isset($params[3]) ? (int)$params[3] : null;
+                $this->controller = new CategoriesController($params[2],$page);
                 break;
             case self::PRODUCT :
                 if (!empty($params[2]) and !Utils::regExpOnlyLettersAndNumbers($params[2])){
