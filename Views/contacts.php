@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container marginTop120PX">
     <div class="row">
         <div class="col-md-4">
             <div class="list-group">
@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="col-md-8">
-            Contacts Controller
+            <h3>ContactsController</h3>
         </div>
     </div>
 </div>

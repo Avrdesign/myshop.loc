@@ -12,7 +12,6 @@ class Error404Controller implements IController
     public function response()
     {
         $categoryRelation = new CategoriesRelation();
-
         $categories = $categoryRelation->getAllCategories();
 
         include_once 'Views/header.php';

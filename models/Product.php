@@ -8,7 +8,6 @@
  */
 class Product
 {
-    protected $id;
     protected $name;
     protected $description;
     protected $icons;
@@ -17,9 +16,8 @@ class Product
     protected $slug;
 
 
-    public function __construct($id,$name,$description,$icons,$price,$exists, $slug)
+    public function __construct($name,$description,$icons,$price,$exists, $slug)
     {
-        $this->id = $id;
         $this->name = $name;
         $this->description = $description;
         $this->icons = $icons;
@@ -71,14 +69,6 @@ class Product
     /**
      * @return mixed
      */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getDescription()
     {
         return $this->description;
@@ -89,7 +79,7 @@ class Product
      */
     public function getIcons()
     {
-        return Rout::base_url().'src/images/'.$this->icons;
+        return $this->icons;
     }
 
     public function getURI(){
@@ -118,6 +108,22 @@ class Product
     public function setExists($exists)
     {
         $this->exists = $exists;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * @param mixed $slug
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
     }
 
 }

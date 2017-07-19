@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container marginTop120PX">
     <div class="row">
         <div class="col-md-4">
             <div class="list-group">
                 <?php
                 /** @var Category $category */
-                /** @var Product $product */
+                /** @var TechProduct $product */
                 foreach ($categories as $category){ ?>
                     <a href="<?php echo Rout::base_url().'category/'.$category->getSlug();?>" class="list-group-item <?php echo (isset($currentCategory) and $currentCategory == $category->getSlug()) ? ' active' : ''; ?>">
                         <?php echo $category->getName();?>

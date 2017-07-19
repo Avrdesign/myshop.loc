@@ -1,5 +1,25 @@
-.categories {
-    background-color: cornflowerblue;
+body {
+    background: url('../src/images/BG.jpg') fixed no-repeat;
+}
+
+
+.categoriesFixed{
+    position: fixed;
+    top: 120px;
+}
+
+.marginTop30PX {
+    margin-top: 30px;
+}
+
+.marginTop120PX {
+    margin-top: 120px;
+}
+
+.shadowBox {
+    -webkit-box-shadow: 7px 9px 20px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 9px 20px -8px rgba(0,0,0,0.75);
+    box-shadow: 7px 9px 20px -8px rgba(0,0,0,0.75);
 }
 
 footer {
@@ -7,11 +27,15 @@ footer {
 }
 
 header {
-    background-color: aquamarine;
+    background-color: rgb(0, 59, 106);
 }
 
-.products{
-    background-color: springgreen;
+header .container {
+    height:100px;
+}
+
+section #carousel{
+    margin-top: 100px;
 }
 
 

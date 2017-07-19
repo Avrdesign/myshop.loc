@@ -11,9 +11,10 @@ class RestController implements IController
 
     public function response()
     {
-        if (isset($_POST["products"],$_POST["user_info"])) {
-
-            echo json_encode(array("status" => "succesful", "order" => 3));
+        if (isset($_POST["products"],$_POST["user_info"])){
+            echo json_encode(array("status"=>"successful","order"=>3));
+        }else{
+            header("Location: ".Rout::base_url()."error");
         }
     }
 }

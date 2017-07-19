@@ -1,6 +1,4 @@
-
-
-<div class="container">
+<div class="container marginTop120PX">
     <div class="row">
         <div class="col-md-4">
             <div class="list-group">
@@ -14,19 +12,22 @@
             </div>
         </div>
         <div class="col-md-8">
-Basket Controller
+            <h3>BasketController</h3>
+
             <form>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Название товара</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Название товара">
+                    <label for="exampleInputEmail1">Номер телефона</label>
+                    <input type="phone" class="form-control" id="exampleInputEmail1" placeholder="Номер телефона">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Адрес доставки</label>
                     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Адрес доставки">
                 </div>
-
-
-                <button type="submit" class="btn btn-default">Заказать</button>
+                <div class="form-group">
+                    <label for="exampleInputPassword3">Комментарий</label>
+                    <textarea class="form-control" rows="5" id="exampleInputPassword3" placeholder="Комментарий"></textarea>
+                </div>
+                <button type="button" class="btn btn-success pull-right">Заказать</button>
             </form>
         </div>
     </div>

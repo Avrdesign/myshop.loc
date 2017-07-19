@@ -9,45 +9,27 @@
 
 class TechProduct extends Product
 {
-    private $categoryId;
-    private $rating;
+    private $categorySlug;
 
-    public function __construct($id, $name, $description, $icon, $price,$categoryId)
+    public function __construct($name,$description,$icons,$price,$exists, $slug,$categorySlug)
     {
-        parent::__construct($id, $name, $description, $icon, $price);
-        $this->categoryId = $categoryId;
-    }
-
-
-    /**
-     * @param mixed $rating
-     */
-    public function setRating($rating)
-    {
-        $this->rating = $rating;
+        parent::__construct($name,$description,$icons,$price,$exists, $slug);
+        $this->categorySlug = $categorySlug;
     }
 
     /**
      * @return mixed
      */
-    public function getRating()
+    public function getCategorySlug()
     {
-        return $this->rating;
+        return $this->categorySlug;
     }
 
     /**
-     * @return mixed
+     * @param mixed $categorySlug
      */
-    public function getCategoryId()
+    public function setCategorySlug($categorySlug)
     {
-        return $this->categoryId;
-    }
-
-    /**
-     * @param mixed $categoryId
-     */
-    public function setCategoryId($categoryId)
-    {
-        $this->categoryId = $categoryId;
+        $this->categorySlug = $categorySlug;
     }
 }

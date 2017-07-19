@@ -8,9 +8,17 @@
  */
 class Admin
 {
+    const PRODUCTS = "products";
+    const PRODUCT = "product";
+    const CATEGORIES = "categories";
+    const CATEGORY = "category";
+    const INFO = "info";
+    const PROMO = "promo";
+    const COMMENTS = "comments";
+
 
     public static function adminValid(){
-        if (!empty($_COOKIE["admin"]) and $_COOKIE["admin"] == 'ok'){
+        if (isset($_COOKIE["admin"]) and !empty($_COOKIE["admin"])){
             $_SESSION["admin"] = $_COOKIE["admin"];
         }else{
             if (empty($_SESSION["admin"]) or $_SESSION["admin"] != 'ok'){
@@ -33,5 +41,18 @@ class Admin
         }else{
             return false;
         }
+    }
+
+    public static function logOutAdmin(){
+
+        if (isset($_COOKIE['admin'])) {
+            unset($_COOKIE['admin']);
+            setcookie('admin', null, -1);
+        }
+        if (isset($_SESSION["admin"])){
+            unset($_SESSION["admin"]);
+        }
+
+        header('Location: http://'.$_SERVER["SERVER_NAME"].'/admin/login.php');
     }
 }
